@@ -107,7 +107,7 @@ This assignment will be graded via peer assessment.
 ## My program
 ## The first function creates a list that sets and gets the value to the matrix and its inverse.
 
-# caches the Matrix inverse
+### caches the Matrix inverse
 
     makeCacheMatrix <- function(x = matrix()) {
         i <- NULL
