@@ -107,15 +107,15 @@ This assignment will be graded via peer assessment.
 ## My program
 ## The first function creates a list that sets and gets the value to the matrix and its inverse.
 
-## caches the Matrix inverse
+# caches the Matrix inverse
 
-makeCacheMatrix <- function(x = matrix()) {
+    makeCacheMatrix <- function(x = matrix()) {
         i <- NULL
-  set <- function(y){
+      set <- function(y){
     x <<- y
     i <<- NULL
-  }
-  get <- function() x
+    }
+    get <- function() x
   
         setInverse <- function(smat)
           {i <<- smat
@@ -125,20 +125,20 @@ makeCacheMatrix <- function(x = matrix()) {
         list(set = set, get = get, setInverse = setInverse, getInverse = getInverse)
 
 
-}
+    }
 
 ## The second function first checks if the inverse has already been calulated, if not then it returns the inverse.
 
 
-cacheSolve <- function(x, ...) {
+    cacheSolve <- function(x, ...) {
         i <- x$getInverse()
-  if(!is.null(i)){
-    message("getting cached data")
-    return(i)
-  }
-  matA <- x$get()
-  i <- solve(matA)
-  x$setInverse(i)
-  i      
+      if(!is.null(i)){
+         message("getting cached data")
+         return(i)
+      }
+     matA <- x$get()
+     i <- solve(matA)
+     x$setInverse(i)
+     i      
         
-}
+    }
